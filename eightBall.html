@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Magic 8 Ball</title>
+  </head>
+  <body>
+    <h3>Seek Guidance From The Spirits With The Magic 8 Ball</h3>
+    <p>Enter your name, ask a question and click submit to receive an answer from the spirits of the Magic 8 Ball!</p>
+    
+    <form id="form">
+        <!--text box needed-->
+      <div id="usernameBox">
+        <label for="usernameEntry">Name: </label>
+        <input type="text" name="username_entry" id="usernameEntry" placeholder="Enter Your Name" autocomplete="off">
+      </div>
+      <br>
+
+      <!--text box needed-->
+      <div id="questionBox">
+        <label for="enterQuestion">Question: </label>
+        <input type="input" name="question_entry" id="enterQuestion" placeholder="Ask Your Question" autocomplete="off" required>
+      </div>
+      <br>
+            <!--When you click submit the code in main.js is invoked-->
+      <div>
+        <button id="submitBtn">Ask the Magic 8 Ball</button>
+      </div>
+      <br>
+      <p id="greeting"></p>
+      <p id="questionDisplay"></p>
+      <label for="answerBox">Answer: </label>
+      <p id = "answerBox"></p>
+    </form>
+    <br>
+    <script src="main.js"></script>
+  </body>
+</html>

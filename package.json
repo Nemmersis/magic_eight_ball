@@ -1,0 +1,17 @@
+{
+  "name": "magic_eight_ball",
+  "version": "1.0.0",
+  "description": "A simple magic eight ball javascript app",
+  "main": "index.js",
+  "scripts": {
+    "hello": "node main.js",
+    "start:mcp": "npx @playwright/mcp@latest && echo 'MCP server is running!'"
+  },
+  "author": "Nemmersis",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^9.8.0",
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.29"
+  }
+}
