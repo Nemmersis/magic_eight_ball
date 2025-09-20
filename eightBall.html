@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="style.css" rel="stylesheet">
     <title>Magic 8 Ball</title>
   </head>
   <body>
@@ -9,14 +10,14 @@
     
     <form id="form">
         <!--text box needed-->
-      <div id="usernameBox">
+      <div id="usernameBox" class="textbox">
         <label for="usernameEntry">Name: </label>
         <input type="text" name="username_entry" id="usernameEntry" placeholder="Enter Your Name" autocomplete="off">
       </div>
       <br>
 
       <!--text box needed-->
-      <div id="questionBox">
+      <div id="questionBox" class="textbox">
         <label for="enterQuestion">Question: </label>
         <input type="input" name="question_entry" id="enterQuestion" placeholder="Ask Your Question" autocomplete="off" required>
       </div>
@@ -26,10 +27,11 @@
         <button id="submitBtn">Ask the Magic 8 Ball</button>
       </div>
       <br>
-      <p id="greeting"></p>
-      <p id="questionDisplay"></p>
+      <p id="greeting" class="answer"></p>
+      <p id="questionDisplay" class="answer"></p>
       <label for="answerBox">Answer: </label>
-      <p id = "answerBox"></p>
+      <p id = "answerBox" class="answer"></p>
+      <img src="ball.png"/>
     </form>
     <br>
     <script src="main.js"></script>
