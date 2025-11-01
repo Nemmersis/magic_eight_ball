@@ -8,21 +8,39 @@
     <h3>Seek Guidance From The Spirits With The Magic 8 Ball</h3>
     <p>Enter your name, ask a question and click submit to receive an answer from the spirits of the Magic 8 Ball!</p>
     
-    <form id="form">
-        <!--text box needed-->
+    <div class="form-widget" role="region" aria-label="Magic 8 Ball form">
+      <form id="magic-form" class="magic-form">
+        <label for="name" class="sr-only">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name:" />
+        <br>
+        <br>
+        <label for="question" class="sr-only">Question</label>
+  <textarea id="question" name="question" rows="3" placeholder="Ask Your Question..."></textarea>
+        <br>
+        <br>
+  <button id="askBtn" type="submit" class="ask-btn">Ask the Magic 8 Ball</button>
+        <br>
+        <br>
+        <p id="greeting" class="answer"></p>
+        <p id="questionDisplay" class="answer"></p>
+        <label for="answerBox">Answer: </label>
+        <p id = "answerBox" class="answer"></p>
+      </form>
+    </div>
+    <!-- <form id="form">
+
       <div id="usernameBox" class="textbox">
         <label for="usernameEntry">Name: </label>
         <input type="text" name="username_entry" id="usernameEntry" placeholder="Enter Your Name" autocomplete="off">
       </div>
       <br>
 
-      <!--text box needed-->
+
       <div id="questionBox" class="textbox">
         <label for="enterQuestion">Question: </label>
         <input type="input" name="question_entry" id="enterQuestion" placeholder="Ask Your Question" autocomplete="off" required>
       </div>
       <br>
-            <!--When you click submit the code in main.js is invoked-->
       <div>
         <button id="submitBtn">Ask the Magic 8 Ball</button>
       </div>
@@ -31,8 +49,8 @@
       <p id="questionDisplay" class="answer"></p>
       <label for="answerBox">Answer: </label>
       <p id = "answerBox" class="answer"></p>
-      <img src="ball.png"/>
-    </form>
+      <img src="images/ball.png"/>
+    </form> -->
     <br>
     <script src="main.js"></script>
   </body>

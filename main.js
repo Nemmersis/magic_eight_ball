@@ -1,9 +1,10 @@
 window.onload = function() {
-
-  const form = document.getElementById('form');
-  const username = document.getElementById('usernameEntry');
+  // Bind to the form and inputs as they appear in the HTML
+  const form = document.getElementById('magic-form');
+  const username = document.getElementById('name');
   const greeting = document.getElementById('greeting');
-  const question = document.getElementById('enterQuestion');
+  const question = document.getElementById('question');
+  const questionDisplay = document.getElementById('questionDisplay');
   const responses = [
       'It is certain!',
       'It is decidedly so.',
@@ -22,15 +23,17 @@ window.onload = function() {
 
     const enterQuestion = question.value.trim();
 
+    // Update the UI
     greeting.textContent = enterName ? `Greetings, ${enterName}` : 'Hello, Stranger...';
     questionDisplay.textContent = `You asked: ${enterQuestion}`;
 
+    // Pick a random response and show it
     const randomNumber = Math.floor(Math.random() * responses.length);
     const answer = responses[randomNumber];
     const answerBox = document.getElementById('answerBox');
-    
     answerBox.textContent = answer;
 
+    // Clear inputs for the next question
     username.value = '';
     question.value = '';
   });
