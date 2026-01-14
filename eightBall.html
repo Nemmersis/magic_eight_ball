@@ -9,49 +9,21 @@
     <p>Enter your name, ask a question and click submit to receive an answer from the spirits of the Magic 8 Ball!</p>
     
     <div class="form-widget" role="region" aria-label="Magic 8 Ball form">
-      <form id="magic-form" class="magic-form">
+      <form id="magic-form" class="magic-form" autocomplete="off">
         <label for="name" class="sr-only">Name</label>
         <input id="name" name="name" type="text" placeholder="Your name:" />
-        <br>
-        <br>
         <label for="question" class="sr-only">Question</label>
-  <textarea id="question" name="question" rows="3" placeholder="Ask Your Question..."></textarea>
+        <textarea id="question" name="question" rows="3" placeholder="Ask Your Question..."></textarea>
+        <button id="askBtn" type="submit" class="ask-btn">Ask the Magic 8 Ball</button>
         <br>
-        <br>
-  <button id="askBtn" type="submit" class="ask-btn">Ask the Magic 8 Ball</button>
-        <br>
-        <br>
-        <p id="greeting" class="answer"></p>
-        <p id="questionDisplay" class="answer"></p>
-        <label for="answerBox">Answer: </label>
-        <p id = "answerBox" class="answer"></p>
+        
+        <div class="answer-container">
+          <p id="greeting" class="answer"></p>
+          <p id="questionDisplay" class="answer"></p>
+          <p id="answerBox" class="answer"></p>
+        </div>
       </form>
     </div>
-    <!-- <form id="form">
-
-      <div id="usernameBox" class="textbox">
-        <label for="usernameEntry">Name: </label>
-        <input type="text" name="username_entry" id="usernameEntry" placeholder="Enter Your Name" autocomplete="off">
-      </div>
-      <br>
-
-
-      <div id="questionBox" class="textbox">
-        <label for="enterQuestion">Question: </label>
-        <input type="input" name="question_entry" id="enterQuestion" placeholder="Ask Your Question" autocomplete="off" required>
-      </div>
-      <br>
-      <div>
-        <button id="submitBtn">Ask the Magic 8 Ball</button>
-      </div>
-      <br>
-      <p id="greeting" class="answer"></p>
-      <p id="questionDisplay" class="answer"></p>
-      <label for="answerBox">Answer: </label>
-      <p id = "answerBox" class="answer"></p>
-      <img src="images/ball.png"/>
-    </form> -->
-    <br>
     <script src="main.js"></script>
   </body>
 </html>
