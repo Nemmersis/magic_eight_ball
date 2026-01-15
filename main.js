@@ -1,6 +1,7 @@
 window.onload = function() {
   // Bind to the form and inputs as they appear in the HTML
   const form = document.getElementById('magic-form');
+  const button = document.querySelector('.ask-btn');
   const username = document.getElementById('name');
   const greeting = document.getElementById('greeting');
   const question = document.getElementById('question');
@@ -17,6 +18,19 @@ window.onload = function() {
       'uuuuuhhhh......'
     ];
 
+  function animateAnswer(element, newText) {
+    return new Promise((resolve) => {
+      element.style.opacity = '0';
+
+      setTimeout(() => {
+        element.textContent = newText;
+
+        element.style.opacity = '1';
+        resolve();
+      }, 300);
+    });
+  }
+
   form.addEventListener('submit', function(event) {
     event.preventDefault();
     const enterName = username.value.trim();
@@ -31,10 +45,17 @@ window.onload = function() {
     const randomNumber = Math.floor(Math.random() * responses.length);
     const answer = responses[randomNumber];
     const answerBox = document.getElementById('answerBox');
-    answerBox.textContent = answer;
+    //answerBox.textContent = answer;
+    animateAnswer(answerBox, answer);
 
     // Clear inputs for the next question
     username.value = '';
     question.value = '';
   });
+
+  const callback = () => {
+    button.classList.add('clicked');
+  }
+
+  button.addEventListener('click', callback);
 };
